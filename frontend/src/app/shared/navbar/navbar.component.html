@@ -1,0 +1,9 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#"> Covinfo </a>
+
+        <div class="dropleft show">
+            <a *ngIf="isLogged()" class="btn btn-primary" (click)="logout()"> Sair </a>
+        </div>
+    </div>
+</nav>

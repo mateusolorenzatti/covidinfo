@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="card col-md-6 offset-md-3 mt-3 p-2">
+        <h5 class="card-title"> Login </h5>
+    
+        <form [formGroup]="loginForm" class="form mt-4" (submit)="login()">
+            
+            <div class="form-group">
+                <input formControlName="userEmail" name="userEmail" class="form-control" placeholder="Email" type="email" autofocus>
+            </div>
+            <br>
+                
+            <div class="form-group">
+                <input formControlName="userPass" name="userPass" class="form-control" placeholder="Senha" type="password">
+            </div>
+            <br>
+
+            <button [disabled]="loginForm.invalid || loginForm.pending" type="submit" class="btn btn-success w-100" login> Entrar </button>
+
+            <br>
+            <br>
+        </form>
+    </div>
+</div>

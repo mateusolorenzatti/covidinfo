@@ -1,0 +1,68 @@
+<div class="container p-3">
+  <div class="card">
+
+    <h5 class="card-header text-center"> <b> {{ data?.country }} </b> </h5>
+
+    <div class="col-12 row">
+      <div class="col-6">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>Total de Casos</td>
+              <td>{{ data?.total_cases }}</td>
+            </tr>
+            <tr>
+              <td>Casos por Milhão</td>
+              <td>{{ data?.cases_1m }}</td>
+            </tr>
+            <tr>
+              <td>Casos Ativos</td>
+              <td>{{ data?.active_cases }}</td>
+            </tr>
+            <tr>
+              <td>Total de Mortes</td>
+              <td>{{ data?.total_deaths }}</td>
+            </tr>
+            <tr>
+              <td>Mortes por Milhão</td>
+              <td>{{ data?.deaths_1m }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-6">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>Total de Recuperados</td>
+              <td>{{ data?.total_recovered }}</td>
+            </tr>
+            <tr>
+              <td>Total de Testes</td>
+              <td>{{ data?.total_tests }}</td>
+            </tr>
+            <tr>
+              <td>Total por Milhão</td>
+              <td>{{ data?.tests_1m }}</td>
+            </tr>
+            <tr>
+              <td>População</td>
+              <td>{{ data?.population }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row col-12 my-2">
+      <div class="col-10">
+        <input type="text" class="form-control" placeholder="Digite um País" id="country" #country>
+      </div>
+      <div class="col-2">
+        <a class="btn btn-success w-100" (click)="refresh()"> Atualizar </a>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -5,9 +5,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardModule } from './dashboard/dashboard.module';
 import { LoginModule } from './login/login.module';
-import { ServicesModule } from './services/services.module';
+import { ServicesModule } from './core/services.module';
 import { NavbarModule } from './shared/navbar/navbar.module';
+import { FooterModule } from './shared/footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { NavbarModule } from './shared/navbar/navbar.module';
     ServicesModule,
     LoginModule,
     NavbarModule,
+    DashboardModule,
+    FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

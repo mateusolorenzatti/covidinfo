@@ -1,0 +1,17 @@
+<div class="card">
+  <h5 class="card-header"> {{ desc }} </h5>
+  <div class="card-body">
+
+    <table class="table">
+      <tbody>
+        
+        <tr *ngFor="let data of data_list">
+          <td>{{ data.country }}</td>
+          <td *ngIf="criteria == 'cases'">{{ data.cases_1m }}</td>
+          <td *ngIf="criteria == 'deaths'">{{ data.deaths_1m }}</td>
+          <td *ngIf="criteria == 'tests'">{{ data.tests_1m }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

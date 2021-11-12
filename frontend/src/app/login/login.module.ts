@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { LoginComponent } from './login.component';
+import { FooterModule } from '../shared/footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { LoginComponent } from './login.component';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FooterModule
   ]
 })
 export class LoginModule { }

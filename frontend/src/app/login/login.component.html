@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="card col-md-6 offset-md-3 mt-3 p-2">
+    <div class="card col-md-6 offset-md-3 mt-3 p-4">
         <h5 class="card-title"> Login </h5>
     
         <form [formGroup]="loginForm" class="form mt-4" (submit)="login()">
@@ -16,8 +16,9 @@
 
             <button [disabled]="loginForm.invalid || loginForm.pending" type="submit" class="btn btn-success w-100" login> Entrar </button>
 
-            <br>
-            <br>
+            <br/>
         </form>
     </div>
 </div>
+
+<cov-footer [fixed]="'yes'"> </cov-footer>

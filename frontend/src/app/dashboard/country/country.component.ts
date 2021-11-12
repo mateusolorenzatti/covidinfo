@@ -34,5 +34,4 @@ export class CountryComponent implements OnInit {
 
         this.countryElement.nativeElement.value = '';
   }
-
 }

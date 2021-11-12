@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard.component';
 import { CountryComponent } from './country/country.component';
 import { RankingListComponent } from './ranking-list/ranking-list.component';
 import { RankingComponent } from './ranking-list/ranking/ranking.component';
+import { FooterModule } from '../shared/footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { RankingComponent } from './ranking-list/ranking/ranking.component';
     RankingComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FooterModule
   ]
 })
 export class DashboardModule { }

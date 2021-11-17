@@ -5,11 +5,13 @@
     <table class="table">
       <tbody>
         
-        <tr *ngFor="let data of data_list">
-          <td>{{ data.country }}</td>
-          <td *ngIf="criteria == 'cases'">{{ data.cases_1m }}</td>
-          <td *ngIf="criteria == 'deaths'">{{ data.deaths_1m }}</td>
-          <td *ngIf="criteria == 'tests'">{{ data.tests_1m }}</td>
+        <tr *ngFor="let data of data_list; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ data.country }} 
+            <small *ngIf="criteria == 'cases'">({{ data.cases_1m }})</small>
+            <small *ngIf="criteria == 'deaths'">({{ data.deaths_1m }})</small>
+            <small *ngIf="criteria == 'tests'">({{ data.tests_1m }})</small>
+          </td>
         </tr>
       </tbody>
     </table>

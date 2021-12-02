@@ -11,8 +11,7 @@ module.exports = app => {
 
     /* Retorna os dados de um país Aleatório */
     app.get('/data', (req, res) => {
-        const countryName = req.params.country
-        
+                
         Data.findOne({
             order: Sequelize.literal('RANDOM()')
         }).then(result => res.status(200).json(result))

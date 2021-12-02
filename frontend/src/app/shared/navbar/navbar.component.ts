@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
   }
 
   logout(){
-    console.log("Opa");
+    // console.log("Opa");
 
     this.userService.logout();
 

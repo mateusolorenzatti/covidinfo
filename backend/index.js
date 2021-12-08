@@ -1,3 +1,4 @@
+require('dotenv').config()
 const custom_express = require('./config/custom_express')
 const conexao = require('./config/database')
 
@@ -5,7 +6,7 @@ const User = require('./models/user')
 const Task = require('./models/data')
 
 //definindo porta
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 ;(async () => {
     try {

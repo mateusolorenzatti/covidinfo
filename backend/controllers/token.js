@@ -20,9 +20,10 @@ module.exports = app => {
                 res.json({
                     token: jwt.encode(payload, cfg.jwtSecret)
                 })
-            }).catch(error => res.sendStatus(401).json(error))
+            }).catch(error => res.status(401).json(error))
+
         } else {
-            res.sendStatus(401)
+            res.status(401)
         }
     })
 };

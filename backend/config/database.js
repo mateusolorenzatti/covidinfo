@@ -2,28 +2,11 @@ require('dotenv').config()
 
 const { Sequelize } = require("sequelize")
 
-var conexao = null
-
-if (process.env.DATABASE_URL){
-    console.log("Conectando com String: " + process.env.DATABASE_URL)
-    
-    conexao = new Sequelize({
-        dialect: 'postgres',
-        dialectOptions: {
-            connectionString: process.env.DATABASE_URL
-        },
-        logging: false
-    })
-    
-}else{
-    console.log("Conectando sem String")
-
-    conexao = new Sequelize('ADS', 'aula', 'aula', {
-        host: 'localhost',
-        dialect: 'postgres',
-        schema: 'covid'
-    })
-
-}
+const conexao = new Sequelize(process.env.DATABASE, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
+    host: process.env.DB_HOST,
+    dialect: 'postgres',
+    schema: process.env.DB_SCHEMA,
+    logging: process.env.ENV == 'dev' ? true : false
+})
 
 module.exports = conexao

@@ -17,12 +17,10 @@ module.exports = app => {
         // atribuindo o conteúdo da requisição
         const user = req.body
 
-        console.table(user)
+        // console.table(user)
 
         User.create(user)
             .then(res.status(201).json({ code: '201', msg: 'Usuário criado' }))
-            .catch(error => {
-                res.status(412).json({ code: '412', msg: error.message })
-            })
+            .catch(error => res.status(412).json({ code: '412', msg: error.message }))
     })
 }

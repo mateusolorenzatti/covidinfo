@@ -9,7 +9,8 @@ module.exports = () => {
     // criando a aplicação - instância do express
 
     const app = express()
-    
+    expressOasGenerator.handleResponses(app, {});
+
     app.use(cors())
 
     consign()
@@ -17,8 +18,8 @@ module.exports = () => {
         .then('libs/middlewares.js')
         .then('controllers')
         .into(app)
-
-    expressOasGenerator.init(app, {})
     
+    expressOasGenerator.handleRequests()
+
     return app
 }

@@ -7,6 +7,7 @@ import { RankingComponent } from './ranking-list/ranking/ranking.component';
 import { FooterModule } from '../shared/footer/footer.module';
 import { CriptoComponent } from './cripto/cripto.component';
 import { WeatherComponent } from './weather/weather.component';
+import { CriptoItemComponent } from './cripto/cripto-item/cripto-item.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { WeatherComponent } from './weather/weather.component';
     RankingListComponent,
     RankingComponent,
     CriptoComponent,
-    WeatherComponent
+    WeatherComponent,
+    CriptoItemComponent
   ],
   imports: [
     CommonModule,

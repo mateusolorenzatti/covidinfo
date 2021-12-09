@@ -9,7 +9,7 @@ module.exports = () => {
     // criando a aplicação - instância do express
 
     const app = express()
-    expressOasGenerator.handleResponses(app, {});
+    expressOasGenerator.handleResponses(app, {})
 
     app.use(cors())
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CriptoService } from 'src/app/core/cripto/cripto.service';
+import { TickerList } from 'src/app/core/cripto/tickerList';
 
 @Component({
   selector: 'app-cripto',
@@ -6,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CriptoComponent implements OnInit {
 
-  constructor() { }
+  coins: string[] = ['DOGE', 'BTC', 'ETH'];
+  tickers: TickerList[];
+
+  constructor(private criptoService: CriptoService) { }
 
   ngOnInit(): void {
+    this.coins.forEach((coin) => {
+
+      this.criptoService.getTicker(coin)
+      .subscribe(
+        data => this.tickers.push(data),
+        err => console.log("Erro!"));
+    })
   }
 
 }

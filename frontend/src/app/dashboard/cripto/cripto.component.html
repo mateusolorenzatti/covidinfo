@@ -3,8 +3,8 @@
         <h5 class="card-header bg-theme-cripto text-dark"> Cripto </h5>
         <div class="card-body">
 
-            <div *ngFor="let ticker of tickers; index as i">
-                <app-cripto-item [coin]="coins[i]" [ticker]="ticker.ticker"> </app-cripto-item>
+            <div *ngFor="let ticker of tickers">
+                <app-cripto-item [ticker]="ticker"> </app-cripto-item>
             </div>
         </div>
     </div>

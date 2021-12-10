@@ -1,8 +1,12 @@
 <div class="px-2 h-100">
     <div class="card border-theme-weather h-100">
         <h5 class="card-header bg-theme-weather text-white"> Clima </h5>
-        <div class="card-body">
-
+        <div class="card-body" *ngIf="data">
+            <p> Em {{ data.name }} - {{ data.state }} no momento: </p>
+            <p> Temperatura (Sensação): {{ data.data.temperature }}ºC ({{ data.data.sensation }}ºC)</p>
+            <p> Condição Climática: {{ data.data.condition }} </p>
+            <p> Humidade Relativa: {{ data.data.humidity }}% </p>
+            <p> Vento: {{ data.data.wind_velocity }}{{ data.data.wind_direction }}  </p>
         </div>
     </div>
 </div>

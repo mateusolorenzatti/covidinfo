@@ -8,8 +8,8 @@ import { TickerList } from 'src/app/core/cripto/tickerList';
 })
 export class CriptoComponent implements OnInit {
 
-  coins: string[] = ['DOGE', 'BTC', 'ETH'];
-  tickers: TickerList[];
+  coins: string[] = ['DOGE', 'BTC', 'ETH', 'ADA', 'XRP', 'UNI', 'SCCPFT'];
+  tickers: TickerList[] = [];
 
   constructor(private criptoService: CriptoService) { }
 
@@ -18,7 +18,10 @@ export class CriptoComponent implements OnInit {
 
       this.criptoService.getTicker(coin)
       .subscribe(
-        data => this.tickers.push(data),
+        data => { 
+          data.coin = coin;
+          this.tickers.push(data);
+        },
         err => console.log("Erro!"));
     })
   }

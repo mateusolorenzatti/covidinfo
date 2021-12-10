@@ -19,7 +19,7 @@ export class RequestInterceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpSentEvent 
         | HttpHeaderResponse | HttpProgressEvent | HttpResponse<any> | HttpUserEvent<any>> {
        
-            if(this.tokenService.hasToken()) {
+            if(this.tokenService.hasToken() && req.url.includes('covidinfo')) {
                 const token = this.tokenService.getToken();
                 req = req.clone({
                     setHeaders: {

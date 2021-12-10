@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Ticker } from 'src/app/core/cripto/ticker';
+import { TickerList } from 'src/app/core/cripto/tickerList';
 
 @Component({
   selector: 'app-cripto-item',
@@ -7,8 +7,7 @@ import { Ticker } from 'src/app/core/cripto/ticker';
 })
 export class CriptoItemComponent implements OnInit {
 
-  @Input() coin: string;
-  @Input() ticker: Ticker;
+  @Input() ticker: TickerList;
 
   constructor() { }
 

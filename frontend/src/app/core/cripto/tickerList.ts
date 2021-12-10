@@ -1,5 +1,6 @@
 import { Ticker } from "./ticker";
 
 export interface TickerList {
-    ticker: Ticker
+    ticker: Ticker,
+    coin: string
 }

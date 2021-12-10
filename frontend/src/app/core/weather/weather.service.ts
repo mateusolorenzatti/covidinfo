@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Weather } from './weather';
 
-const BASE_URL = "http://apiadvisor.climatempo.com.br/api/v1";
+const BASE_URL = "https://apiadvisor.climatempo.com.br/api/v1";
 const TOKEN = environment.CLIMATEMPO_TOKEN;
 
 @Injectable({

@@ -8,3 +8,5 @@ Prática válida para as disciplinas do 5º semestre do Curso de Análise e Dese
 
 Autores:
  - Mateus Orlandin Lorenzatti
+ - Sidimar Salla
+ - Vinícius Fardo Riboldi

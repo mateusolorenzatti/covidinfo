@@ -3,13 +3,13 @@ const conexao = require('./database')
 const express = require('express')
 const consign = require('consign')
 const cors = require('cors')
-const expressOasGenerator = require('express-oas-generator')
+
+const { options } = require('./swagger')
 
 module.exports = () => {
     // criando a aplicação - instância do express
 
     const app = express()
-    expressOasGenerator.handleResponses(app, {})
 
     app.use(cors())
 
@@ -18,8 +18,9 @@ module.exports = () => {
         .then('libs/middlewares.js')
         .then('controllers')
         .into(app)
-    
-    expressOasGenerator.handleRequests()
+
+    const expressSwagger = require('express-swagger-generator')(app)
+    expressSwagger(options)
 
     return app
 }

@@ -8,14 +8,19 @@ import { TickerList } from 'src/app/core/cripto/tickerList';
 })
 export class CriptoComponent implements OnInit {
 
-  coins: string[] = ['DOGE', 'BTC', 'ETH', 'ADA', 'XRP', 'UNI', 'SCCPFT'];
+  coins: string[] = ['DOGE', 'BTC', 'ETH', 'ADA', 'XRP', 'UNI', 'DOT'];
   tickers: TickerList[] = [];
 
   constructor(private criptoService: CriptoService) { }
 
   ngOnInit(): void {
-    this.coins.forEach((coin) => {
+    this.refresh();
+  }
 
+  refresh(){
+    this.tickers = [];
+
+    this.coins.forEach((coin) => {
       this.criptoService.getTicker(coin)
       .subscribe(
         data => { 

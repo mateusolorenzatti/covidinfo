@@ -1,7 +1,7 @@
 <div class="px-3">
   <div class="card border-theme-second">
 
-    <h5 class="card-header text-center bg-theme-second text-white"> <b> {{ data?.country }} </b> </h5>
+    <h5 class="card-header bg-theme-second text-white"> <b> <i class="fa fa-globe" aria-hidden="true"></i> | {{ data?.country }} </b> </h5>
 
     <div class="col-12 row">
       <div class="col-6">
@@ -61,7 +61,9 @@
         <input type="text" class="form-control" placeholder="Digite um País" id="country" #country>
       </div>
       <div class="col-2">
-        <a class="btn btn-success w-100" (click)="refresh()"> Atualizar </a>
+        <a class="btn btn-success w-100" (click)="refresh()"> 
+          <i class="fa fa-refresh"></i>
+        </a>
       </div>
       <div class="col-1"></div>
     </div>

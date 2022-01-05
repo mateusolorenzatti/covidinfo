@@ -27,4 +27,12 @@ export class AuthService {
         console.log(`User ${email} authenticated with token ${authToken}`);
       }));
   }
+
+  signUp(name: string, email: string, password: string){
+    return this.http.post<any>(
+      this.config.apiPostUser(), 
+      { name, email, password }, 
+      { observe: 'response'} 
+    );
+  }
 }

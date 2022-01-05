@@ -4,12 +4,19 @@ import { LoginRequiredGuard } from './core/auth/login-required.guard';
 import { RedirectIfLoggedGuard } from './core/auth/redirect-if-logged.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
     component: LoginComponent,
+    canActivate: [RedirectIfLoggedGuard]
+  },
+  {
+    path: 'signup',
+    pathMatch: 'full',
+    component: SignupComponent,
     canActivate: [RedirectIfLoggedGuard]
   },
   {

@@ -8,7 +8,8 @@ $theme-colors: (
   "theme-cripto": rgb(219, 185, 34),
   "theme-weather": rgb(35, 116, 209),
 
-  "success": #22630eff
+  "success": #22630eff,
+  "danger": rgb(145, 50, 22),
 );
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';

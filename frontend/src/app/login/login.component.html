@@ -14,11 +14,14 @@
             </div>
             <br>
 
+            <div *ngIf="loginErro" class="alert alert-danger" role="alert">
+                Login inválido! Tente outras credenciais, ou crie uma nova conta abaixo.
+            </div>
+
             <button [disabled]="loginForm.invalid || loginForm.pending" type="submit" class="btn btn-success w-100" login> Entrar </button>
 
+            <a class="btn btn-link mt-2 text-center w-100" [routerLink]="['/signup']"> Criar conta </a>
             <br/>
         </form>
     </div>
 </div>
-
-<cov-footer [fixed]="'yes'"> </cov-footer>

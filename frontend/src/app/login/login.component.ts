@@ -10,6 +10,7 @@ import { AuthService } from '../core/auth/auth.service';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
+  loginErro: Boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -39,6 +40,7 @@ export class LoginComponent implements OnInit {
         err => {
           console.log(err);
           this.loginForm.reset();
+          this.loginErro = true;
         }
       );
   }

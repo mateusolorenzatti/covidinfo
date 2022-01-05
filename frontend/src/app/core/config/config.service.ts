@@ -6,6 +6,7 @@ const api_routes = {
   token: API_URL + "/token/",
   country: API_URL + "/data/",
   ranking: API_URL + "/data/rank/",
+  users: API_URL + "/users/",
 }
 
 @Injectable({
@@ -21,6 +22,10 @@ export class ConfigService {
 
   public apiToken(){
     return api_routes.token;
+  }
+
+  public apiPostUser(){
+    return api_routes.users;
   }
 
   public getRandomCountryData(){

@@ -10,6 +10,7 @@ import { LoginModule } from './login/login.module';
 import { ServicesModule } from './core/services.module';
 import { NavbarModule } from './shared/navbar/navbar.module';
 import { FooterModule } from './shared/footer/footer.module';
+import { SignupModule } from './signup/signup.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FooterModule } from './shared/footer/footer.module';
     LoginModule,
     NavbarModule,
     DashboardModule,
-    FooterModule
+    FooterModule,
+    SignupModule
   ],
   providers: [],
   bootstrap: [AppComponent]

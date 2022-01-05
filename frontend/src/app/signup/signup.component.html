@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="card col-md-6 offset-md-3 mt-3 p-4">
+        <h5 class="card-title"> Registrar </h5>
+    
+        <form [formGroup]="newUserForm" class="form mt-4" (submit)="createUser()">
+            
+            <div class="form-group">
+                <input formControlName="userName" name="userName" class="form-control" placeholder="Nome" type="text" autofocus>
+            </div>
+            <br>
+           
+            <div class="form-group">
+                <input formControlName="userEmail" name="userEmail" class="form-control" placeholder="Email" type="email" autofocus>
+            </div>
+            <br>
+            
+            <div class="form-group">
+                <input formControlName="userPass" name="userPass" class="form-control" placeholder="Senha" type="password">
+            </div>
+            <br>
+
+            <div class="form-group">
+                <input formControlName="confirmUserPass" name="confirmUserPass" class="form-control" placeholder="Confirmar Senha" type="password">
+            </div>
+            <br>
+
+            <div *ngIf="erro" class="alert alert-danger" role="alert">
+                Não foi possível criar a conta. Verifique se a senha de confirmação está correta.
+            </div>
+            
+            <div *ngIf="help" class="alert alert-info" role="alert">
+                Criando o usuário... Assim que estiver tudo ok te levaremos direto para o Login.
+            </div>
+
+            <button [disabled]="(newUserForm.invalid || newUserForm.pending)"
+                    type="submit" 
+                    class="btn btn-success w-100" 
+                    createUser> 
+                        Submeter 
+            </button>
+
+            <a class="btn btn-link mt-2 text-center w-100" [routerLink]="['']"> Voltar ao Login </a>
+            
+            <br/>
+        </form>
+    </div>
+</div>
